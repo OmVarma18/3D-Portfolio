@@ -18,15 +18,15 @@ const HeroText = () => {
                 initial="hidden"
                 animate="visible"
                 transition={{delay:1}}
-               className='text-4xl font-medium'>Hi I am Om</motion.h1>
+               className='text-4xl font-medium text-white'>Hi I am Om</motion.h1>
                 <div className='flex flex-col items-start'>
                     <motion.p  
                     variants={variants}
                 initial="hidden"
                 animate="visible"
                 transition={{delay:1.2}}                   
-                    className='text-5xl font-medium text-neutral-300'>
-                        A Developer Dedicated to Crafting
+                    className='text-5xl font-medium text-white'>
+                        A Developer and Designer Dedicated <br/> to Crafting
                     </motion.p>
                     <motion.div       
                     variants={variants}
@@ -39,7 +39,7 @@ const HeroText = () => {
                 initial="hidden"
                 animate="visible"
                 transition={{delay:1.8}}
-                    className='text-4xl font-medium text-neutral-300'
+                    className='text-4xl font-medium text-white'
                     >Web Solutions</motion.p>
                 </div>
             </div>
