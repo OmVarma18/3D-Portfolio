@@ -227,17 +227,17 @@ export const mySocials = [
   {
     name: "X",
     href: "https://x.com/OmVarma_9",
-    icon: "/assets/socials/x.png",
+    icon: `${import.meta.env.BASE_URL}assets/socials/x.png`,
   },
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/om-varma-16s/",
-    icon: "/assets/socials/linkedIn.svg",
+    icon: `${import.meta.env.BASE_URL}assets/socials/linkedIn.svg`, // Changed here
   },
   {
     name: "GitHub",
     href: "https://github.com/OmVarma18/",
-    icon: "/assets/socials/github.webp",
+    icon: `${import.meta.env.BASE_URL}assets/socials/github.webp`, // Changed here
   },
 ];
 

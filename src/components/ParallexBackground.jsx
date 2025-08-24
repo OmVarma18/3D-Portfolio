@@ -1,5 +1,5 @@
 import React from 'react'
-import {motion,useScroll,useTransform,useSpring} from 'motion/react';
+import {motion,useScroll,useTransform,useSpring} from 'motion/react'; // Corrected framer-motion import
 
 const ParallexBackground = () => {
   const {scrollYProgress} = useScroll();
@@ -15,34 +15,34 @@ const ParallexBackground = () => {
             {/* Sky */}
             <div className='absolute inset-0 w-full h-screen -z-50'
             style={{
-              backgroundImage: "url('/assets/sky.jpg')",
+              backgroundImage: `url(${import.meta.env.BASE_URL}assets/sky.jpg)`,
               backgroundPosition: 'bottom',
               backgroundSize: 'cover',
             }}/>
             <motion.div className='absolute inset-0 -z-40'
             style={{
-              backgroundImage: "url('/assets/mountain-3.png')",
+              backgroundImage: `url(${import.meta.env.BASE_URL}assets/mountain-3.png)`,
               backgroundPosition: 'bottom',
               backgroundSize: 'cover',
               y: mountain3Y,
             }}/>
             <motion.div className='absolute inset-0 -z-30'
             style={{
-              backgroundImage: "url('/assets/planets.png')",
+              backgroundImage: `url(${import.meta.env.BASE_URL}assets/planets.png)`,
               backgroundPosition: 'bottom',
               backgroundSize: 'cover',
               x: planetsX,
             }} />
             <motion.div className='absolute inset-0 -z-20'
             style={{
-              backgroundImage: "url('/assets/mountain-2.png')",
+              backgroundImage: `url(${import.meta.env.BASE_URL}assets/mountain-2.png)`,
               backgroundPosition: 'bottom',
               backgroundSize: 'cover',
               y: mountain2Y,
             }}/>
             <motion.div className='absolute inset-0 -z-10'
             style={{
-              backgroundImage: "url('/assets/mountain-1.png')",
+              backgroundImage: `url(${import.meta.env.BASE_URL}assets/mountain-1.png)`,
               backgroundPosition: 'bottom',
               backgroundSize: 'cover',
               y: mountain1Y,
@@ -52,4 +52,4 @@ const ParallexBackground = () => {
   )
 }
 
-export default ParallexBackground
+export default ParallexBackground;

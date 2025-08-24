@@ -6,7 +6,7 @@ import { motion, useMotionValue ,useSpring} from "motion/react"
 
 export function Astronaut(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/models/tenhun_falling_spaceman_fanart.glb')
+  const { nodes, materials, animations } = useGLTF(`${import.meta.env.BASE_URL}models/tenhun_falling_spaceman_fanart.glb`);
   const { actions } = useAnimations(animations, group)
   useEffect(()=>{
     if (animations.length>0) {
@@ -108,8 +108,7 @@ export function Astronaut(props) {
   )
 }
 
-useGLTF.preload('/models/tenhun_falling_spaceman_fanart.glb')
-
+useGLTF.preload(`${import.meta.env.BASE_URL}models/tenhun_falling_spaceman_fanart.glb`);
 
 
 export default Astronaut 
