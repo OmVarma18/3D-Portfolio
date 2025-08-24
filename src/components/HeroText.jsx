@@ -26,7 +26,7 @@ const HeroText = () => {
                 animate="visible"
                 transition={{delay:1.2}}                   
                     className='text-5xl font-medium text-white'>
-                        A Developer and Designer Dedicated <br/> to Crafting
+                        A Developer and Designer <br/> Dedicated to Crafting
                     </motion.p>
                     <motion.div       
                     variants={variants}
