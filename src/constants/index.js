@@ -225,19 +225,19 @@ export const myProjects = [
 
 export const mySocials = [
   {
-    name: "WhatsApp",
-    href: "",
-    icon: "/assets/socials/whatsApp.svg",
+    name: "X",
+    href: "https://x.com/OmVarma_9",
+    icon: "/assets/socials/x.png",
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/ali-sanati/",
+    href: "https://www.linkedin.com/in/om-varma-16s/",
     icon: "/assets/socials/linkedIn.svg",
   },
   {
-    name: "Instagram",
-    href: "https://www.instagram.com/ali.sanatidev/reels/",
-    icon: "/assets/socials/instagram.svg",
+    name: "GitHub",
+    href: "https://github.com/OmVarma18/",
+    icon: "/assets/socials/github.webp",
   },
 ];
 

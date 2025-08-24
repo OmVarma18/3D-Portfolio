@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/FrameWorks";
+import DownloadResume from "../components/DownloadResume";
 
 const About = () => {
   const grid2Container = useRef();
@@ -90,6 +91,7 @@ const About = () => {
               Do you want to start a project together?
             </p>
             <CopyEmailButton />
+            <DownloadResume />
           </div>
         </div>
         {/* Grid 5 */}
