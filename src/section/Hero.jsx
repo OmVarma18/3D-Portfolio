@@ -11,7 +11,7 @@ import Loader from '../components/Loader'
 const Hero = () => {
   const isMobile=useMediaQuery({maxWidth:853})
   return (
-    <section className='flex-items items-start justify-center md:items-start min-h-screen overflow-hidden'>
+    <section className='flex-items items-start justify-center md:items-start min-h-screen overflow-hidden' id='hero'>
       <HeroText />
       <ParallexBackground />
       <figure className='absolute inset-0 '
