@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-// Corrected framer-motion import
 import { motion, AnimatePresence } from 'motion/react';
+import { mySocials } from '../constants';
 
 function Navigation({ onNavLinkClick }) {
-  // Utility function to handle smooth scrolling
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -26,9 +25,6 @@ function Navigation({ onNavLinkClick }) {
       </li> */}
       <li className='nav-li'>
         <a className='nav-link' href='#contact' onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a>
-      </li>
-      <li className='nav-li'>
-        <a className='nav-link' href='#social' onClick={(e) => { e.preventDefault(); scrollToSection('footer'); }}>Social</a>
       </li>
     </ul>
   );
@@ -59,7 +55,14 @@ const Navbar = () => {
             <img src={isOpen ? closeIconPath : menuIconPath} className="w-6 h-6" alt="Menu Icon" />
           </button>
           <nav className='hidden sm:flex'>
-            <Navigation onNavLinkClick={closeMobileNav} /> {/* Pass closeMobileNav to Navigation */}
+            <Navigation onNavLinkClick={closeMobileNav} />
+            { <div className="flex gap-3 p-3">
+                    {mySocials.map((social, index) => (
+                      <a href={social.href} key={index} target="_blank" >
+                        <img src={social.icon} className="w-5 h-5" alt={social.name} />
+                      </a>
+                    ))}
+              </div> }
           </nav>
         </div>
       </div>

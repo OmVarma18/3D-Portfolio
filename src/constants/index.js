@@ -232,12 +232,17 @@ export const mySocials = [
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/om-varma-16s/",
-    icon: `${import.meta.env.BASE_URL}assets/socials/linkedIn.svg`, // Changed here
+    icon: `${import.meta.env.BASE_URL}assets/socials/linkedIn.svg`, 
   },
   {
     name: "GitHub",
     href: "https://github.com/OmVarma18/",
-    icon: `${import.meta.env.BASE_URL}assets/socials/github.webp`, // Changed here
+    icon: `${import.meta.env.BASE_URL}assets/socials/github.webp`, 
+  },
+  {
+    name: "Leetcode",
+    href: "",
+    icon: `${import.meta.env.BASE_URL}assets/socials/leetcode.svg`,
   },
 ];
 

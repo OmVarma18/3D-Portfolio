@@ -2,10 +2,10 @@ import HeroText from '../components/HeroText'
 import ParallexBackground from '../components/ParallexBackground'
 import Astronaut from '../components/Astronaut'
 import {Canvas,useFrame} from '@react-three/fiber'
-import { Float, OrbitControls} from '@react-three/drei'
+import { Float, OrbitControls, DragControls} from '@react-three/drei'
 import {useMediaQuery} from 'react-responsive';
 import { easing } from "maath";
-import { Suspense } from 'react'
+import { Suspense , useRef} from 'react'
 import Loader from '../components/Loader'
 
 const Hero = () => {

@@ -10,7 +10,7 @@ import Testimonial from './section/Testimonial';
 
 const App = () => {
   return (
-    <div className='container mx-auto max-w-7xl'>
+    <div className=' mx-auto max-w-7xl'>
         <Navbar />
         <Hero/>
         <About/>

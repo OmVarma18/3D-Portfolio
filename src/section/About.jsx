@@ -60,7 +60,7 @@ const About = () => {
               text="SRP"
               containerRef={grid2Container}
             />
-            <Card
+            {/* <Card
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
               image="assets/logos/csharp-pink.png"
               containerRef={grid2Container}
@@ -69,7 +69,7 @@ const About = () => {
               style={{ rotate: "-45deg", top: "70%", left: "25%" }}
               image="assets/logos/dotnet-pink.png"
               containerRef={grid2Container}
-            />
+            /> */}
           </div>
         </div>
         {/* Grid 3 */}
