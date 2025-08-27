@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Alert from "../components/Alert";    
+import Alert from "../components/Alert";
 import Particles from '../components/Particles';
 
 const Contact = () => {
@@ -7,16 +7,17 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    address: "" // Added for the honeypot
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("success");
   const [alertMessage, setAlertMessage] = useState("");
-  
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  
+
   const showAlertMessage = (type, message) => {
     setAlertType(type);
     setAlertMessage(message);
@@ -25,17 +26,27 @@ const Contact = () => {
       setShowAlert(false);
     }, 5000);
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
+    // HONEYPOT IMPLEMENTATION:
+    // Check if the hidden honeypot field has been filled. If so, it's a bot.
+    if (formData.address) {
+      console.log("Bot detected. Submission ignored.");
+      setIsLoading(false);
+      setFormData({ name: "", email: "", message: "", address: "" }); // Clear form data without sending
+      showAlertMessage("success", "Your message has been sent!"); // Show a success message to not alert the bot
+      return;
+    }
+
     try {
       console.log("Form submitted:");
-      
+
       // Replace this URL with your Google Apps Script Web App URL
       const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzP1ycFwRZSE1Iff0XzPyCd5k-fgjWE_YRqOaz7IDWEdA-gsQSkp0vKt6ajNNDk0xwGow/exec';
-      
+
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors', // Important for Google Apps Script
@@ -51,16 +62,16 @@ const Contact = () => {
       });
 
       setIsLoading(false);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", message: "", address: "" });
       showAlertMessage("success", "Your message has been sent!");
-      
+
     } catch (error) {
       setIsLoading(false);
       console.log(error);
       showAlertMessage("danger", "Something went wrong!");
     }
   };
-  
+
   return (
     <section className="relative flex items-center c-space section-spacing" id="contact">
       <Particles
@@ -76,10 +87,24 @@ const Contact = () => {
           <h2 className="text-heading">Let's Talk</h2>
           <p className="font-normal text-neutral-400">
             Whether you're looking to build a new website, improve your existing
-            platform, bring a unique project to life, or have a job offer. You can contact me here. 
+            platform, bring a unique project to life, or have a job offer. You can contact me here.
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
+          {/* Honeypot Field */}
+          <div style={{ position: 'absolute', left: '-5000px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}>
+            <label htmlFor="address">Address</label>
+            <input
+              id="address"
+              name="address"
+              type="text"
+              tabIndex="-1"
+              autoComplete="off"
+              value={formData.address}
+              onChange={handleChange}
+            />
+          </div>
+
           <div className="mb-5">
             <label htmlFor="name" className="feild-label">
               Full Name
