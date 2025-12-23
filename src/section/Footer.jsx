@@ -15,7 +15,7 @@ const Footer = () => {
           </a>
         ))}
       </div> }
-      <p>© 2025 Om Varma. All rights reserved.</p>
+      <p>© 2025 Om Varma.</p>
     </section>
   );
 };

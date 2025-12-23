@@ -61,7 +61,7 @@ export const mySocials = [
   },
   {
     name: "Leetcode",
-    href: "",
+    href: "https://leetcode.com/u/omvarma369/",
     icon: `${import.meta.env.BASE_URL}assets/socials/leetcode.svg`,
   },
 ];
