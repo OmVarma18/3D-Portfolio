@@ -1,0 +1,23 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "Om",
+    "homepage": "https://omvarma18.github.io/3D-Portfolio",
+    "items": [
+        {
+            "name": "button",
+            "type": "registry:ui",
+            "title": "Basic Button",
+            "description": "A very simple button that inverts colors.",
+            "files": [
+                {
+                    "path": "registry/basic/button/button.jsx",
+                    "type": "registry:ui",
+                    "target": "components/ui/button.jsx"
+                }
+            ]
+        }
+    ],
+    "registry": {
+        "om": "https://omvarma18.github.io/3D-Portfolio"
+    }
+}

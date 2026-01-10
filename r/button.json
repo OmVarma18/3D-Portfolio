@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "title": "Basic Button",
+  "description": "A very simple button that inverts colors.",
+  "files": [
+    {
+      "path": "registry/basic/button/button.jsx",
+      "content": "\"use client\"\r\nimport React from 'react';\r\n\r\nexport function BasicButton({ children, ...props }) {\r\n    return (\r\n        <button\r\n            {...props}\r\n            style={{\r\n                backgroundColor: 'white',\r\n                color: 'black',\r\n                border: '1px solid black',\r\n                padding: '8px 16px',\r\n                cursor: 'pointer',\r\n                transition: 'all 0.2s ease'\r\n            }}\r\n            onMouseOver={(e) => {\r\n                e.target.style.backgroundColor = 'black';\r\n                e.target.style.color = 'white';\r\n            }}\r\n            onMouseOut={(e) => {\r\n                e.target.style.backgroundColor = 'white';\r\n                e.target.style.color = 'black';\r\n            }}\r\n        >\r\n            {children}\r\n        </button>\r\n    );\r\n}\r\n",
+      "type": "registry:ui",
+      "target": "components/ui/button.jsx"
+    }
+  ],
+  "type": "registry:ui"
+}
