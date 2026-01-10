@@ -1,6 +1,6 @@
 {
     "$schema": "https://ui.shadcn.com/schema/registry.json",
-    "name": "Om",
+    "name": "om",
     "homepage": "https://omvarma18.github.io/3D-Portfolio",
     "items": [
         {
@@ -18,6 +18,6 @@
         }
     ],
     "registry": {
-        "om": "https://omvarma18.github.io/3D-Portfolio"
+        "om": "https://omvarma18.github.io/3D-Portfolio/r"
     }
 }
